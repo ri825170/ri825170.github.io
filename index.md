@@ -1,9 +1,6 @@
 # PowerShell Notes
 
-[TOC]
-
 ### General Information about PowerShell
-
 
 
 - The version of PowerShell changes depending on the OS. This is automatic 
@@ -14,8 +11,8 @@
 
 - By default PowerShell runs under normal user privileges
 
-- - To avoid this the application can by launched as administrator
-  - Or you can run the command *Start-process PowerShell -verb runas*
+   - To avoid this the application can by launched as administrator
+   - Or you can run the command *Start-process PowerShell -verb runas*
 
 - Use *| more* after a command allows you to read the result 1 page at time. Ex *Get-Command | more*
 
@@ -23,9 +20,9 @@
 
 - If a directory has spaces in the name need to be used bracket:
 
-- - Cd Rename File Script wont work
+ - Cd Rename File Script wont work
 
-  - Cd “Rename File Script” will work
+ - Cd “Rename File Script” will work
 
     
 
@@ -49,13 +46,13 @@
 
 - Set the execution policy or otherwise will not be possible execute powershell scripts
 
--- Execute *Set-ExecutionPolicy RemoteSigned*
+- Execute *Set-ExecutionPolicy RemoteSigned*
 
 
 
 - Enable PowerShell remoting (if you need that the PC you are working on may **receive** commands remotely
 
-- - Execute *Enable-PSRemoting*
+- Execute *Enable-PSRemoting*
 
 
 
@@ -104,26 +101,26 @@ Write-Host ""
 
 - Basic Structure of a Cmdlets: **Verb-Noun -parameter <argument>** where:
 
-- -  the **verb** describes the action that is to take place
+-  the **verb** describes the action that is to take place
 
   - The **noun** describes the target for that action
 
   - The **parameter** is an optional characteristic of the noun
 
-  - - Parameters are always preceded by a hyphen (-)
-    - The **argument** is a value that can be provided for a parameters
+  - Parameters are always preceded by a hyphen (-)
+  - The **argument** is a value that can be provided for a parameters
 
 
 
 - There are six common Cmdlets verbs:
 
-- - Get → Queries a specific object
+  - Get → Queries a specific object
   - Set → Modifies the settings of an object
   - Enable → enables a setting
   - Disable → Disables a setting
   - New → Creates a new instance of an item
   - Remove → Remove an instance of an item
-  - 
+  
 
 
 
@@ -160,7 +157,7 @@ Write-Host ""
 
 - There are 4 types of format:
 
-- - Format-Wide: Displays only the default property 
+  - Format-Wide: Displays only the default property 
   - Format List: Format as a list
   - Format-Table: format in a tabular layout
   - Format-Custom: use a custom layout
@@ -195,20 +192,20 @@ Write-Host ""
 ### Variables
 
 - You can assign a variable with:
-
-- - $<variable name> ex. $a = 4
+  
+  - $<variable name> ex. $a = 4
 
   - New-Variable cmdlet
 
   - The variable name can contain letters,numbers, symbols or spaces. If contain spaces must be enclosed in braces {}
 
   - You can assign a data type to the variable
-
-  - - Ex. [int]$a=4
+    
+    - Ex. ``` [int]$a=4 ```
 
   - This are the most common data type:
 
-  - - [datetime] → date or time
+    - [datetime] → date or time
     - [string] → string of characters
     - [char] → single character
     - [double] → double precision floating number
@@ -260,6 +257,7 @@ Set-Variable name_variable -option constant -value value → the variable cannot
 #### Constants
 
 - A constant is a variable that once the value is set it can’t be easily changed
+
 - To create a constant use following syntax:
 
 Set-Variable name_variable -option ReadOnly
@@ -278,7 +276,7 @@ Comparison Operators
 
 - Most common comparison operators:
 
-- - -eq → Equal to (=)
+  - -eq → Equal to (=)
   - -lt → less than (<)
   - -gt → greater than (>)
   - -ge → greater than or equal to (<=)
@@ -290,9 +288,9 @@ If you put c before the operator (ex. -ceq) it will be case sensitive
 
 - Logical operators:
 
-- - -not → Not (may be used also !)
+  - -not → Not (may be used also !)
   - -and → and
-  - -or → or
+  - -or  → or
 
 
 
